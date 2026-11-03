@@ -6,15 +6,23 @@ import com.sonnet.pojo.User;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication
+@ImportResource("classpath:bean.xml")
 public class App {
 
     public static void main(String[] args) {
         ConfigurableApplicationContext context = SpringApplication.run(App.class, args);
+        String[] beanDefinitionNames = context.getBeanDefinitionNames();
+        for (String beanDefinitionName : beanDefinitionNames) {
+            System.out.println(beanDefinitionName);
+        }
+/*
         User user = context.getBean("user", User.class);
         Cat cat = context.getBean("cat", Cat.class);
         System.out.println(user.getCat() == cat);
+*/
 
 /*
         ConfigurableApplicationContext context = SpringApplication.run(App.class, args);

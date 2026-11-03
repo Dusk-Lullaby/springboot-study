@@ -1,0 +1,66 @@
+server:
+  port: 8082  #修改项目的端口号
+
+#定义字符串数据的时候 是不需要双引号的
+name: lisi
+age: 12
+
+#定义复杂数据类型
+#定义对象 第一种方式
+animal:
+  name: dahuang
+  age: 2
+
+#定义对象 第二种写法
+animal2: {name: xiaohuang, age: 2}
+
+#数组 List set 方式一
+pets:
+  - cat
+  - dog
+  - fish
+
+#数组 List set 方式二
+pets2: [cat,dog,fish]
+
+#map集合
+map1: {k1: v1, k2: v2}
+
+
+person:
+  userName: zhangsan
+  boss: false
+  birth: 2019/12/12 20:12:33
+  age: 18
+  pet:
+    name: tomcat
+    weight: 23.4
+  interests: [篮球,游泳]
+  animal:
+  - jerry
+  - mario
+  score:
+    english:
+      first: 30
+      second: 40
+      third: 50
+    math: [131,140,148]
+    chinese: {first: 128,second: 136}
+  salarys: [3999,4999.98,5999.99]
+  allPets:
+    sick:
+    - {name: tom}
+    - {name: jerry,weight: 47}
+    health: [{name: mario,weight: 47}]
+
+## 自定义静态资源映射规则（配置前缀）
+#spring:
+#  mvc:
+#    static-path-pattern: /hello/**
+
+
+## 自定义静态资源的存放目录
+#spring:
+#  web:
+#    resources:
+#      static-locations: [classpath:/hello/]
