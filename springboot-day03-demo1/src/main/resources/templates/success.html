@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<!--引入thymeleaf的命名空间，只有引入了这个域名，才可以使用thymeleaf的表达式-->
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h3>这是一个成功页面...</h3>
+    <span th:text = "${msg}"></span>
+    <ul>
+        <li th:each = "str: ${list}" th:text = "${str}"></li>
+    </ul>
+</body>
+</html>
