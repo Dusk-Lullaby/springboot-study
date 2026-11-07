@@ -1,0 +1,4 @@
+sonnet:
+  hello:
+    prefix: hello
+    suffix: springboot
